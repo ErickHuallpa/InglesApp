@@ -1,0 +1,22 @@
+INSERT INTO badges (title, description, icon_url, criteria_json, created_at, updated_at)
+VALUES
+-- Básico
+('Badge: Subject Pronouns', 'Completa la lección sobre pronombres personales.', NULL, '{"lesson_title": "Subject Pronouns"}', NOW(), NOW()),
+('Badge: Verb To Be', 'Domina el uso del verbo to be en presente.', NULL, '{"lesson_title": "Verb To Be - Present Tense"}', NOW(), NOW()),
+('Badge: Simple Present', 'Habla sobre tus actividades diarias.', NULL, '{"lesson_title": "Simple Present - Daily Activities"}', NOW(), NOW()),
+('Badge: Articles', 'Aprende a usar a, an y the correctamente.', NULL, '{"lesson_title": "Articles - A, An, The"}', NOW(), NOW()),
+('Badge: Family Vocabulary', 'Memoriza los miembros de la familia.', NULL, '{"lesson_title": "Vocabulary - Family"}', NOW(), NOW()),
+
+-- Intermedio
+('Badge: Present Continuous', 'Habla sobre acciones en progreso.', NULL, '{"lesson_title": "Present Continuous"}', NOW(), NOW()),
+('Badge: Past Simple', 'Usa correctamente el pasado simple.', NULL, '{"lesson_title": "Past Simple"}', NOW(), NOW()),
+('Badge: Comparatives', 'Compara personas y objetos.', NULL, '{"lesson_title": "Comparatives and Superlatives"}', NOW(), NOW()),
+('Badge: There is / There are', 'Expresa existencia de objetos.', NULL, '{"lesson_title": "There is / There are"}', NOW(), NOW()),
+('Badge: Prepositions', 'Ubica objetos en el espacio.', NULL, '{"lesson_title": "Prepositions of Place"}', NOW(), NOW()),
+
+-- Avanzado
+('Badge: Present Perfect', 'Conecta acciones pasadas con el presente.', NULL, '{"lesson_title": "Present Perfect"}', NOW(), NOW()),
+('Badge: Future Perfect', 'Habla de acciones completadas en el futuro.', NULL, '{"lesson_title": "Future Perfect"}', NOW(), NOW()),
+('Badge: Conditionals', 'Entiende y aplica los condicionales.', NULL, '{"lesson_title": "Conditionals"}', NOW(), NOW()),
+('Badge: Passive Voice', 'Cambia el enfoque a la acción.', NULL, '{"lesson_title": "Passive Voice"}', NOW(), NOW()),
+('Badge: Reported Speech', 'Reporta lo que otros dijeron.', NULL, '{"lesson_title": "Reported Speech"}', NOW(), NOW());

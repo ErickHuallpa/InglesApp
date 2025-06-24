@@ -1,0 +1,28 @@
+SELECT id, title, description, "level", "content", "order", created_at, updated_at
+FROM public.lessons;
+
+INSERT INTO lessons (title, description, level, content, "order", created_at, updated_at)
+VALUES
+-- Básico
+('Subject Pronouns', 'Introducción a los pronombres personales.', 'basic', '{"text": "I, You, He, She, It, We, They"}', 1, NOW(), NOW()),
+('Verb To Be - Present Tense', 'Usos del verbo to be (am, is, are).', 'basic', '{"text": "I am, You are, He is, etc."}', 2, NOW(), NOW()),
+('Simple Present - Daily Activities', 'Cómo hablar de rutinas diarias.', 'basic', '{"examples": ["I wake up at 7am", "She eats breakfast"]}', 3, NOW(), NOW()),
+('Articles - A, An, The', 'Uso correcto de artículos definidos e indefinidos.', 'basic', '{"rules": "Use a before consonant sounds, an before vowel sounds"}', 4, NOW(), NOW()),
+('Vocabulary - Family', 'Miembros de la familia en inglés.', 'basic', '{"list": ["mother", "father", "sister", "brother"]}', 5, NOW(), NOW()),
+
+-- Intermedio
+('Present Continuous', 'Acciones en progreso.', 'intermediate', '{"examples": ["I am reading", "She is cooking"]}', 1, NOW(), NOW()),
+('Past Simple', 'Verbos regulares e irregulares en pasado.', 'intermediate', '{"examples": ["He played", "They went"]}', 2, NOW(), NOW()),
+('Comparatives and Superlatives', 'Comparar cosas o personas.', 'intermediate', '{"examples": ["taller", "the tallest"]}', 3, NOW(), NOW()),
+('There is / There are', 'Expresar existencia.', 'intermediate', '{"examples": ["There is a book", "There are pencils"]}', 4, NOW(), NOW()),
+('Prepositions of Place', 'Cómo ubicar objetos.', 'intermediate', '{"examples": ["on", "under", "next to"]}', 5, NOW(), NOW()),
+
+-- Avanzado
+('Present Perfect', 'Conexión entre pasado y presente.', 'advanced', '{"examples": ["I have finished", "She has gone"]}', 1, NOW(), NOW()),
+('Future Perfect', 'Acciones que se habrán completado.', 'advanced', '{"examples": ["I will have done it"]}', 2, NOW(), NOW()),
+('Conditionals', 'Condiciones y consecuencias.', 'advanced', '{"types": ["Zero", "First", "Second"]}', 3, NOW(), NOW()),
+('Passive Voice', 'Enfocar en la acción, no en el sujeto.', 'advanced', '{"examples": ["The book was written by..."]}', 4, NOW(), NOW()),
+('Reported Speech', 'Reportar lo que otros dijeron.', 'advanced', '{"examples": ["He said he was tired"]}', 5, NOW(), NOW());
+
+
+
