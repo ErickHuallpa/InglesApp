@@ -29,16 +29,14 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
             'role_id' => 2,
         ]);
-
-        Auth::login($user);
-
-        return redirect('/dashboard');
+        return redirect('/login')->with('success', 'Registro exitoso. Por favor, inicia sesión.');
     }
     public function showLoginForm()
     {
         return view('auth.login');
     }
 
+    
     public function login(Request $request)
     {
         $credentials = $request->validate([
@@ -49,7 +47,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/home/index');
         }
 
         return back()->withErrors([

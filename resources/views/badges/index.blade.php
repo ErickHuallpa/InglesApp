@@ -1,4 +1,4 @@
-@extends('dashboard')
+@extends('layouts.dashboard')
 
 @section('content')
 <div class="w-full px-4 mx-auto">

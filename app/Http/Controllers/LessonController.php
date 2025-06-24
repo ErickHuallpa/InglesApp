@@ -66,17 +66,21 @@ class LessonController extends Controller
 
         $score = 0;
         $total = $exercises->count();
+
         $validated = $request->validate([
             'answers' => 'required|array',
             'answers.*' => 'nullable|string',
         ]);
 
         $answers = $validated['answers'];
+        $user = auth()->user();
 
         foreach ($exercises as $exercise) {
             $correctAnswers = json_decode($exercise->correct_answer, true);
-
             $userAnswer = $answers[$exercise->id] ?? null;
+            $isCorrect = false;
+            $exerciseScore = 0;
+
             if ($exercise->type === 'multiple_choice') {
                 $userAnswersArr = is_string($userAnswer) ? explode(',', $userAnswer) : [];
                 $userAnswersArr = array_map('trim', $userAnswersArr);
@@ -85,6 +89,8 @@ class LessonController extends Controller
 
                 if ($userAnswersArr === $correctAnswers) {
                     $score++;
+                    $isCorrect = true;
+                    $exerciseScore = 1;
                 }
             }
             elseif ($exercise->type === 'short_answer') {
@@ -92,24 +98,44 @@ class LessonController extends Controller
                     foreach ($correctAnswers as $correct) {
                         if (strcasecmp(trim($userAnswer), trim($correct)) === 0) {
                             $score++;
+                            $isCorrect = true;
+                            $exerciseScore = 1;
                             break;
                         }
                     }
                 }
             }
+
+            // Guardar o actualizar el resultado del ejercicio para el usuario
+            \App\Models\UserResult::updateOrCreate(
+                [
+                    'user_id' => $user->id,
+                    'exercise_id' => $exercise->id,
+                ],
+                [
+                    'user_answer' => $userAnswer,
+                    'is_correct' => $isCorrect,
+                    'score' => $exerciseScore,
+                    'answered_at' => now(),
+                ]
+            );
         }
+
+        // Registrar progreso y completar la lección
         \App\Models\UserProgress::updateOrCreate(
             [
-                'user_id' => auth()->id(),
+                'user_id' => $user->id,
                 'lesson_id' => $lesson->id,
             ],
             [
                 'completed_at' => now(),
             ]
         );
+
         return redirect()->route('lessons.index')
             ->with('success', "Lección completada con puntuación: $score / $total");
     }
+
 
 
 }

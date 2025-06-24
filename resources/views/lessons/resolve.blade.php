@@ -1,4 +1,4 @@
-@extends('dashboard')
+@extends('layouts.dashboard')
 
 @section('content')
 <h1 class="text-2xl font-bold mb-6 text-center">Resolver: {{ $lesson->title }}</h1>

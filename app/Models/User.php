@@ -45,4 +45,8 @@ class User extends Authenticatable
                     ->withPivot('achieved_at')
                     ->withTimestamps();
     }
+    public function vocabulary()
+    {
+        return $this->hasMany(Vocabulary::class);
+    }
 }
