@@ -8,6 +8,7 @@ use App\Http\Controllers\LessonResolveController;
 use App\Http\Controllers\BadgeController;
 use App\Http\Controllers\VocabularyController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\CheckRole;
 
 Route::get('/', function () {
@@ -23,7 +24,6 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -51,5 +51,9 @@ Route::middleware([
         Route::get('lessons/create', [LessonController::class, 'create'])->name('lessons.create');
         Route::get('lessons/{lesson}/edit', [LessonController::class, 'edit'])->name('lessons.edit');
         Route::delete('lessons/{lesson}', [LessonController::class, 'destroy'])->name('lessons.destroy');
+        Route::get('/users', [UserController::class, 'index'])->name('users.index');
+        Route::post('/users', [UserController::class, 'store'])->name('users.store');
+        Route::put('/users/{id}', [UserController::class, 'store'])->name('users.update');
+        Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
     });
 });

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Lesson;
+use App\Models\User;
 use App\Models\UserProgress;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -52,9 +53,10 @@ class LessonResolveController extends Controller
                 ['user_id' => $user->id, 'lesson_id' => $lesson->id],
                 ['completed_at' => now()]
             );
+            $this->checkUserLevel($user);
             foreach ($lesson->badges as $badge) {
                 $alreadyHas = $user->badges()->where('badge_id', $badge->id)->exists();
-                if (! $alreadyHas) {
+                if (!$alreadyHas) {
                     $user->badges()->attach($badge->id, ['achieved_at' => now()]);
                 }
             }
@@ -65,13 +67,34 @@ class LessonResolveController extends Controller
                 'success_type' => 'full'
             ]);
         }
+        
         return redirect()->route('lessons.index')->with([
             'success' => "Puntuación obtenida: $score / $total. Debes responder todo correctamente.",
             'success_type' => 'partial'
         ]);
-
     }
 
+    
+    protected function checkUserLevel(User $user)
+    {
+        $basicCount = $user->lessonsCompleted()
+            ->where('level', 'basic')
+            ->count();
 
+        $intermediateCount = $user->lessonsCompleted()
+            ->where('level', 'intermediate')
+            ->count();
 
+        $newLevel = $user->level;
+
+        if ($basicCount >= 5 && $user->level !== 'intermediate') {
+            $newLevel = 'intermediate';
+        } elseif ($intermediateCount >= 5 && $user->level !== 'advanced') {
+            $newLevel = 'advanced';
+        }
+
+        if ($newLevel !== $user->level) {
+            $user->update(['level' => $newLevel]);
+        }
+    }
 }
