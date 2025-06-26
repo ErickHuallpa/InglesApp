@@ -1,6 +1,7 @@
 SELECT id, title, description, "level", "content", "order", created_at, updated_at
 FROM public.lessons;
 
+
 INSERT INTO lessons (title, description, level, content, "order", created_at, updated_at)
 VALUES
 -- Básico

@@ -3,198 +3,198 @@ FROM public.exercises;
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(4, '¿Cuál es el pronombre para "yo"?', 'multiple_choice', '["I", "You", "He", "She"]', '["I"]', NULL, NOW(), NOW()),
-(4, 'Selecciona el pronombre correcto para "ellos".', 'multiple_choice', '["He", "She", "They", "It"]', '["They"]', NULL, NOW(), NOW()),
-(4, 'Traduce al inglés: "Nosotros".', 'short_answer', NULL, '["We"]', NULL, NOW(), NOW()),
-(4, '¿Qué pronombre usarías para referirte a un objeto?', 'multiple_choice', '["He", "She", "It", "They"]', '["It"]', NULL, NOW(), NOW()),
-(4, 'Completa la frase: ___ am happy.', 'short_answer', NULL, '["I"]', NULL, NOW(), NOW()),
-(4, '¿Cuál es el pronombre para "ella"?', 'multiple_choice', '["He", "She", "It", "We"]', '["She"]', NULL, NOW(), NOW()),
-(4, 'Selecciona los pronombres personales en inglés.', 'multiple_choice', '["I", "They", "Car", "He"]', '["I", "They", "He"]', NULL, NOW(), NOW()),
-(4, '¿Cuál es el pronombre correcto para "tú"?', 'short_answer', NULL, '["You"]', NULL, NOW(), NOW()),
-(4, 'Traduce al inglés: "él".', 'short_answer', NULL, '["He"]', NULL, NOW(), NOW()),
-(4, '¿Cuál pronombre usarías para referirte a un grupo que incluye a la persona que habla?', 'multiple_choice', '["You", "We", "They", "He"]', '["We"]', NULL, NOW(), NOW());
+(1, '¿Cuál es el pronombre para "yo"?', 'multiple_choice', '["I", "You", "He", "She"]', '["I"]', NULL, NOW(), NOW()),
+(1, 'Selecciona el pronombre correcto para "ellos".', 'multiple_choice', '["He", "She", "They", "It"]', '["They"]', NULL, NOW(), NOW()),
+(1, 'Traduce al inglés: "Nosotros".', 'short_answer', NULL, '["We"]', NULL, NOW(), NOW()),
+(1, '¿Qué pronombre usarías para referirte a un objeto?', 'multiple_choice', '["He", "She", "It", "They"]', '["It"]', NULL, NOW(), NOW()),
+(1, 'Completa la frase: ___ am happy.', 'short_answer', NULL, '["I"]', NULL, NOW(), NOW()),
+(1, '¿Cuál es el pronombre para "ella"?', 'multiple_choice', '["He", "She", "It", "We"]', '["She"]', NULL, NOW(), NOW()),
+(1, 'Selecciona los pronombres personales en inglés.', 'multiple_choice', '["I", "They", "Car", "He"]', '["I", "They", "He"]', NULL, NOW(), NOW()),
+(1, '¿Cuál es el pronombre correcto para "tú"?', 'short_answer', NULL, '["You"]', NULL, NOW(), NOW()),
+(1, 'Traduce al inglés: "él".', 'short_answer', NULL, '["He"]', NULL, NOW(), NOW()),
+(1, '¿Cuál pronombre usarías para referirte a un grupo que incluye a la persona que habla?', 'multiple_choice', '["You", "We", "They", "He"]', '["We"]', NULL, NOW(), NOW());
 
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(5, 'Completa la frase: I ___ happy.', 'short_answer', NULL, '["am"]', NULL, NOW(), NOW()),
-(5, 'Selecciona la forma correcta del verbo "to be" para: He ___.', 'multiple_choice', '["am", "is", "are"]', '["is"]', NULL, NOW(), NOW()),
-(5, '¿Cuál es la forma correcta para "You" con el verbo "to be"?', 'multiple_choice', '["am", "is", "are"]', '["are"]', NULL, NOW(), NOW()),
-(5, 'Traduce al inglés: "Ellos son amigos".', 'short_answer', NULL, '["They are friends"]', NULL, NOW(), NOW()),
-(5, 'Completa la frase: We ___ at home.', 'short_answer', NULL, '["are"]', NULL, NOW(), NOW()),
-(5, '¿Cuál es la forma correcta para "I" con el verbo "to be"?', 'multiple_choice', '["am", "is", "are"]', '["am"]', NULL, NOW(), NOW()),
-(5, 'Selecciona la frase correcta:', 'multiple_choice', '["She am tall", "She is tall", "She are tall"]', '["She is tall"]', NULL, NOW(), NOW()),
-(5, 'Completa: You ___ my friend.', 'short_answer', NULL, '["are"]', NULL, NOW(), NOW()),
-(5, '¿Qué forma del verbo "to be" corresponde con "It"?', 'multiple_choice', '["am", "is", "are"]', '["is"]', NULL, NOW(), NOW()),
-(5, 'Traduce: "Yo soy estudiante".', 'short_answer', NULL, '["I am a student"]', NULL, NOW(), NOW());
+(2, 'Completa la frase: I ___ happy.', 'short_answer', NULL, '["am"]', NULL, NOW(), NOW()),
+(2, 'Selecciona la forma correcta del verbo "to be" para: He ___.', 'multiple_choice', '["am", "is", "are"]', '["is"]', NULL, NOW(), NOW()),
+(2, '¿Cuál es la forma correcta para "You" con el verbo "to be"?', 'multiple_choice', '["am", "is", "are"]', '["are"]', NULL, NOW(), NOW()),
+(2, 'Traduce al inglés: "Ellos son amigos".', 'short_answer', NULL, '["They are friends"]', NULL, NOW(), NOW()),
+(2, 'Completa la frase: We ___ at home.', 'short_answer', NULL, '["are"]', NULL, NOW(), NOW()),
+(2, '¿Cuál es la forma correcta para "I" con el verbo "to be"?', 'multiple_choice', '["am", "is", "are"]', '["am"]', NULL, NOW(), NOW()),
+(2, 'Selecciona la frase correcta:', 'multiple_choice', '["She am tall", "She is tall", "She are tall"]', '["She is tall"]', NULL, NOW(), NOW()),
+(2, 'Completa: You ___ my friend.', 'short_answer', NULL, '["are"]', NULL, NOW(), NOW()),
+(2, '¿Qué forma del verbo "to be" corresponde con "It"?', 'multiple_choice', '["am", "is", "are"]', '["is"]', NULL, NOW(), NOW()),
+(2, 'Traduce: "Yo soy estudiante".', 'short_answer', NULL, '["I am a student"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(6, '¿Cómo se dice "Me levanto a las 7am" en inglés?', 'short_answer', NULL, '["I wake up at 7am"]', NULL, NOW(), NOW()),
-(6, 'Selecciona la frase correcta:', 'multiple_choice', '["She eat breakfast", "She eats breakfast", "She eating breakfast"]', '["She eats breakfast"]', NULL, NOW(), NOW()),
-(6, 'Completa: He ___ to work every day.', 'short_answer', NULL, '["goes"]', NULL, NOW(), NOW()),
-(6, '¿Cuál es la forma correcta para "I" en presente simple?', 'multiple_choice', '["wakes", "wake", "waking"]', '["wake"]', NULL, NOW(), NOW()),
-(6, 'Traduce: "Ella camina al parque".', 'short_answer', NULL, '["She walks to the park"]', NULL, NOW(), NOW()),
-(6, 'Selecciona la oración correcta:', 'multiple_choice', '["They goes to school", "They go to school", "They going to school"]', '["They go to school"]', NULL, NOW(), NOW()),
-(6, 'Completa: We ___ dinner at 7pm.', 'short_answer', NULL, '["eat"]', NULL, NOW(), NOW()),
-(6, '¿Cuál es la forma correcta para "He" en presente simple?', 'multiple_choice', '["eat", "eats", "eating"]', '["eats"]', NULL, NOW(), NOW()),
-(6, 'Traduce: "Tú estudias inglés".', 'short_answer', NULL, '["You study English"]', NULL, NOW(), NOW()),
-(6, '¿Cómo se dice "Ellos leen libros"?', 'short_answer', NULL, '["They read books"]', NULL, NOW(), NOW());
+(3, '¿Cómo se dice "Me levanto a las 7am" en inglés?', 'short_answer', NULL, '["I wake up at 7am"]', NULL, NOW(), NOW()),
+(3, 'Selecciona la frase correcta:', 'multiple_choice', '["She eat breakfast", "She eats breakfast", "She eating breakfast"]', '["She eats breakfast"]', NULL, NOW(), NOW()),
+(3, 'Completa: He ___ to work every day.', 'short_answer', NULL, '["goes"]', NULL, NOW(), NOW()),
+(3, '¿Cuál es la forma correcta para "I" en presente simple?', 'multiple_choice', '["wakes", "wake", "waking"]', '["wake"]', NULL, NOW(), NOW()),
+(3, 'Traduce: "Ella camina al parque".', 'short_answer', NULL, '["She walks to the park"]', NULL, NOW(), NOW()),
+(3, 'Selecciona la oración correcta:', 'multiple_choice', '["They goes to school", "They go to school", "They going to school"]', '["They go to school"]', NULL, NOW(), NOW()),
+(3, 'Completa: We ___ dinner at 7pm.', 'short_answer', NULL, '["eat"]', NULL, NOW(), NOW()),
+(3, '¿Cuál es la forma correcta para "He" en presente simple?', 'multiple_choice', '["eat", "eats", "eating"]', '["eats"]', NULL, NOW(), NOW()),
+(3, 'Traduce: "Tú estudias inglés".', 'short_answer', NULL, '["You study English"]', NULL, NOW(), NOW()),
+(3, '¿Cómo se dice "Ellos leen libros"?', 'short_answer', NULL, '["They read books"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(7, 'Selecciona el artículo correcto: ___ apple a day keeps the doctor away.', 'multiple_choice', '["A", "An", "The"]', '["An"]', NULL, NOW(), NOW()),
-(7, 'Completa: I have ___ car.', 'short_answer', NULL, '["a"]', NULL, NOW(), NOW()),
-(7, '¿Es verdadero o falso? Se usa "an" antes de sonidos vocálicos.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(7, 'Selecciona el artículo correcto: She bought ___ umbrella.', 'multiple_choice', '["A", "An", "The"]', '["An"]', NULL, NOW(), NOW()),
-(7, 'Completa: I saw ___ elephant at the zoo.', 'short_answer', NULL, '["an"]', NULL, NOW(), NOW()),
-(7, '¿Verdadero o falso? Usamos "the" para hablar de algo específico.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(7, 'Selecciona la opción correcta: ___ book on the table is mine.', 'multiple_choice', '["A", "An", "The"]', '["The"]', NULL, NOW(), NOW()),
-(7, 'Completa: She wants to buy ___ orange.', 'short_answer', NULL, '["an"]', NULL, NOW(), NOW()),
-(7, '¿Es correcto usar "a" antes de la palabra "hour"?', 'true_false', NULL, '["false"]', NULL, NOW(), NOW()),
-(7, 'Selecciona el artículo correcto: I need ___ pen.', 'multiple_choice', '["A", "An", "The"]', '["A"]', NULL, NOW(), NOW());
+(4, 'Selecciona el artículo correcto: ___ apple a day keeps the doctor away.', 'multiple_choice', '["A", "An", "The"]', '["An"]', NULL, NOW(), NOW()),
+(4, 'Completa: I have ___ car.', 'short_answer', NULL, '["a"]', NULL, NOW(), NOW()),
+(4, '¿Es verdadero o falso? Se usa "an" antes de sonidos vocálicos.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(4, 'Selecciona el artículo correcto: She bought ___ umbrella.', 'multiple_choice', '["A", "An", "The"]', '["An"]', NULL, NOW(), NOW()),
+(4, 'Completa: I saw ___ elephant at the zoo.', 'short_answer', NULL, '["an"]', NULL, NOW(), NOW()),
+(4, '¿Verdadero o falso? Usamos "the" para hablar de algo específico.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(4, 'Selecciona la opción correcta: ___ book on the table is mine.', 'multiple_choice', '["A", "An", "The"]', '["The"]', NULL, NOW(), NOW()),
+(4, 'Completa: She wants to buy ___ orange.', 'short_answer', NULL, '["an"]', NULL, NOW(), NOW()),
+(4, '¿Es correcto usar "a" antes de la palabra "hour"?', 'true_false', NULL, '["false"]', NULL, NOW(), NOW()),
+(4, 'Selecciona el artículo correcto: I need ___ pen.', 'multiple_choice', '["A", "An", "The"]', '["A"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(8, '¿Cómo se dice "madre" en inglés?', 'short_answer', NULL, '["mother"]', NULL, NOW(), NOW()),
-(8, 'Selecciona la palabra correcta para "padre".', 'multiple_choice', '["father", "brother", "sister", "uncle"]', '["father"]', NULL, NOW(), NOW()),
-(8, '¿Verdadero o falso? "Sister" significa hermana.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(8, '¿Cómo se dice "hermano" en inglés?', 'short_answer', NULL, '["brother"]', NULL, NOW(), NOW()),
-(8, 'Selecciona el miembro de la familia que es mujer.', 'multiple_choice', '["father", "uncle", "mother", "cousin"]', '["mother"]', NULL, NOW(), NOW()),
-(8, '¿Verdadero o falso? "Cousin" es tío.', 'true_false', NULL, '["false"]', NULL, NOW(), NOW()),
-(8, 'Completa la frase: My ___ is very kind.', 'short_answer', NULL, '["sister"]', NULL, NOW(), NOW()),
-(8, 'Selecciona la palabra que significa "hermano".', 'multiple_choice', '["mother", "father", "brother", "aunt"]', '["brother"]', NULL, NOW(), NOW()),
-(8, '¿Verdadero o falso? "Father" significa padre.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(8, '¿Cómo se dice "hermana" en inglés?', 'short_answer', NULL, '["sister"]', NULL, NOW(), NOW());
+(5, '¿Cómo se dice "madre" en inglés?', 'short_answer', NULL, '["mother"]', NULL, NOW(), NOW()),
+(5, 'Selecciona la palabra correcta para "padre".', 'multiple_choice', '["father", "brother", "sister", "uncle"]', '["father"]', NULL, NOW(), NOW()),
+(5, '¿Verdadero o falso? "Sister" significa hermana.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(5, '¿Cómo se dice "hermano" en inglés?', 'short_answer', NULL, '["brother"]', NULL, NOW(), NOW()),
+(5, 'Selecciona el miembro de la familia que es mujer.', 'multiple_choice', '["father", "uncle", "mother", "cousin"]', '["mother"]', NULL, NOW(), NOW()),
+(5, '¿Verdadero o falso? "Cousin" es tío.', 'true_false', NULL, '["false"]', NULL, NOW(), NOW()),
+(5, 'Completa la frase: My ___ is very kind.', 'short_answer', NULL, '["sister"]', NULL, NOW(), NOW()),
+(5, 'Selecciona la palabra que significa "hermano".', 'multiple_choice', '["mother", "father", "brother", "aunt"]', '["brother"]', NULL, NOW(), NOW()),
+(5, '¿Verdadero o falso? "Father" significa padre.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(5, '¿Cómo se dice "hermana" en inglés?', 'short_answer', NULL, '["sister"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(9, '¿Cómo se forma el presente continuo?', 'short_answer', NULL, '["am/is/are + verbo + -ing"]', NULL, NOW(), NOW()),
-(9, 'Selecciona la frase correcta:', 'multiple_choice', '["I am reading", "I reading", "I is reading"]', '["I am reading"]', NULL, NOW(), NOW()),
-(9, 'Completa: She ___ (cook) dinner right now.', 'short_answer', NULL, '["is cooking"]', NULL, NOW(), NOW()),
-(9, '¿Verdadero o falso? El presente continuo indica una acción que ocurre ahora.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(9, 'Selecciona la forma correcta: They ___ (play) football.', 'multiple_choice', '["are play", "are playing", "is playing"]', '["are playing"]', NULL, NOW(), NOW()),
-(9, 'Completa: I ___ (watch) TV.', 'short_answer', NULL, '["am watching"]', NULL, NOW(), NOW()),
-(9, '¿Verdadero o falso? El presente continuo se usa para acciones futuras planificadas.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(9, 'Selecciona la frase incorrecta:', 'multiple_choice', '["He is running", "He are running", "They are running"]', '["He are running"]', NULL, NOW(), NOW()),
-(9, 'Completa: We ___ (study) English.', 'short_answer', NULL, '["are studying"]', NULL, NOW(), NOW()),
-(9, '¿Verdadero o falso? En presente continuo, el verbo principal lleva "-ing".', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
+(6, '¿Cómo se forma el presente continuo?', 'short_answer', NULL, '["am/is/are + verbo + -ing"]', NULL, NOW(), NOW()),
+(6, 'Selecciona la frase correcta:', 'multiple_choice', '["I am reading", "I reading", "I is reading"]', '["I am reading"]', NULL, NOW(), NOW()),
+(6, 'Completa: She ___ (cook) dinner right now.', 'short_answer', NULL, '["is cooking"]', NULL, NOW(), NOW()),
+(6, '¿Verdadero o falso? El presente continuo indica una acción que ocurre ahora.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(6, 'Selecciona la forma correcta: They ___ (play) football.', 'multiple_choice', '["are play", "are playing", "is playing"]', '["are playing"]', NULL, NOW(), NOW()),
+(6, 'Completa: I ___ (watch) TV.', 'short_answer', NULL, '["am watching"]', NULL, NOW(), NOW()),
+(6, '¿Verdadero o falso? El presente continuo se usa para acciones futuras planificadas.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(6, 'Selecciona la frase incorrecta:', 'multiple_choice', '["He is running", "He are running", "They are running"]', '["He are running"]', NULL, NOW(), NOW()),
+(6, 'Completa: We ___ (study) English.', 'short_answer', NULL, '["are studying"]', NULL, NOW(), NOW()),
+(6, '¿Verdadero o falso? En presente continuo, el verbo principal lleva "-ing".', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(10, 'Selecciona la forma correcta del verbo en pasado: He ___ (play) football.', 'multiple_choice', '["played", "play", "plays"]', '["played"]', NULL, NOW(), NOW()),
-(10, '¿Cómo se forma el pasado simple para verbos regulares?', 'short_answer', NULL, '["verbo + ed"]', NULL, NOW(), NOW()),
-(10, 'Completa: They ___ (go) to the park yesterday.', 'short_answer', NULL, '["went"]', NULL, NOW(), NOW()),
-(10, '¿Verdadero o falso? "Went" es pasado de "go".', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(10, 'Selecciona el verbo irregular:', 'multiple_choice', '["played", "went", "walked"]', '["went"]', NULL, NOW(), NOW()),
-(10, 'Completa: She ___ (watch) a movie last night.', 'short_answer', NULL, '["watched"]', NULL, NOW(), NOW()),
-(10, '¿Verdadero o falso? El pasado simple solo se usa para acciones que terminaron en el pasado.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(10, 'Selecciona la frase correcta:', 'multiple_choice', '["He go to school", "He went to school", "He going to school"]', '["He went to school"]', NULL, NOW(), NOW()),
-(10, 'Completa: I ___ (see) a bird yesterday.', 'short_answer', NULL, '["saw"]', NULL, NOW(), NOW()),
-(10, '¿Verdadero o falso? Para verbos irregulares no se añade "-ed".', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
+(7, 'Selecciona la forma correcta del verbo en pasado: He ___ (play) football.', 'multiple_choice', '["played", "play", "plays"]', '["played"]', NULL, NOW(), NOW()),
+(7, '¿Cómo se forma el pasado simple para verbos regulares?', 'short_answer', NULL, '["verbo + ed"]', NULL, NOW(), NOW()),
+(7, 'Completa: They ___ (go) to the park yesterday.', 'short_answer', NULL, '["went"]', NULL, NOW(), NOW()),
+(7, '¿Verdadero o falso? "Went" es pasado de "go".', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(7, 'Selecciona el verbo irregular:', 'multiple_choice', '["played", "went", "walked"]', '["went"]', NULL, NOW(), NOW()),
+(7, 'Completa: She ___ (watch) a movie last night.', 'short_answer', NULL, '["watched"]', NULL, NOW(), NOW()),
+(7, '¿Verdadero o falso? El pasado simple solo se usa para acciones que terminaron en el pasado.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(7, 'Selecciona la frase correcta:', 'multiple_choice', '["He go to school", "He went to school", "He going to school"]', '["He went to school"]', NULL, NOW(), NOW()),
+(7, 'Completa: I ___ (see) a bird yesterday.', 'short_answer', NULL, '["saw"]', NULL, NOW(), NOW()),
+(7, '¿Verdadero o falso? Para verbos irregulares no se añade "-ed".', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(11, 'Selecciona la forma correcta comparativa de "tall".', 'multiple_choice', '["taller", "tallest", "more tall"]', '["taller"]', NULL, NOW(), NOW()),
-(11, '¿Cuál es el superlativo de "big"?', 'short_answer', NULL, '["the biggest"]', NULL, NOW(), NOW()),
-(11, 'Completa: She is ___ than her brother.', 'short_answer', NULL, '["taller"]', NULL, NOW(), NOW()),
-(11, '¿Verdadero o falso? "The tallest" se usa para comparar tres o más cosas.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(11, 'Selecciona la frase correcta:', 'multiple_choice', '["He is more taller", "He is taller", "He is the taller"]', '["He is taller"]', NULL, NOW(), NOW()),
-(11, 'Completa: This is ___ house in the neighborhood.', 'short_answer', NULL, '["the biggest"]', NULL, NOW(), NOW()),
-(11, '¿Verdadero o falso? Los comparativos se forman añadiendo "-er" o usando "more".', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(11, 'Selecciona la opción incorrecta:', 'multiple_choice', '["smaller", "smallest", "more small"]', '["more small"]', NULL, NOW(), NOW()),
-(11, 'Completa: Today is ___ than yesterday.', 'short_answer', NULL, '["colder"]', NULL, NOW(), NOW()),
-(11, '¿Verdadero o falso? El superlativo indica el grado máximo.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
+(8, 'Selecciona la forma correcta comparativa de "tall".', 'multiple_choice', '["taller", "tallest", "more tall"]', '["taller"]', NULL, NOW(), NOW()),
+(8, '¿Cuál es el superlativo de "big"?', 'short_answer', NULL, '["the biggest"]', NULL, NOW(), NOW()),
+(8, 'Completa: She is ___ than her brother.', 'short_answer', NULL, '["taller"]', NULL, NOW(), NOW()),
+(8, '¿Verdadero o falso? "The tallest" se usa para comparar tres o más cosas.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(8, 'Selecciona la frase correcta:', 'multiple_choice', '["He is more taller", "He is taller", "He is the taller"]', '["He is taller"]', NULL, NOW(), NOW()),
+(8, 'Completa: This is ___ house in the neighborhood.', 'short_answer', NULL, '["the biggest"]', NULL, NOW(), NOW()),
+(8, '¿Verdadero o falso? Los comparativos se forman añadiendo "-er" o usando "more".', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(8, 'Selecciona la opción incorrecta:', 'multiple_choice', '["smaller", "smallest", "more small"]', '["more small"]', NULL, NOW(), NOW()),
+(8, 'Completa: Today is ___ than yesterday.', 'short_answer', NULL, '["colder"]', NULL, NOW(), NOW()),
+(8, '¿Verdadero o falso? El superlativo indica el grado máximo.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(12, 'Selecciona la forma correcta: ___ a cat on the roof.', 'multiple_choice', '["There is", "There are"]', '["There is"]', NULL, NOW(), NOW()),
-(12, 'Completa: ___ many books on the table.', 'short_answer', NULL, '["There are"]', NULL, NOW(), NOW()),
-(12, '¿Verdadero o falso? "There is" se usa para singular.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(12, '¿Verdadero o falso? "There are" se usa para plural.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(12, 'Selecciona la frase correcta:', 'multiple_choice', '["There is two dogs", "There are two dogs"]', '["There are two dogs"]', NULL, NOW(), NOW()),
-(12, 'Completa: ___ a pencil in my bag.', 'short_answer', NULL, '["There is"]', NULL, NOW(), NOW()),
-(12, '¿Verdadero o falso? Se usa "There is" con sustantivos incontables.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(12, 'Selecciona la opción incorrecta:', 'multiple_choice', '["There is some milk", "There are some milk"]', '["There are some milk"]', NULL, NOW(), NOW()),
-(12, 'Completa: ___ a lot of people at the party.', 'short_answer', NULL, '["There are"]', NULL, NOW(), NOW()),
-(12, '¿Verdadero o falso? "There is" y "There are" se usan para expresar existencia.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
+(9, 'Selecciona la forma correcta: ___ a cat on the roof.', 'multiple_choice', '["There is", "There are"]', '["There is"]', NULL, NOW(), NOW()),
+(9, 'Completa: ___ many books on the table.', 'short_answer', NULL, '["There are"]', NULL, NOW(), NOW()),
+(9, '¿Verdadero o falso? "There is" se usa para singular.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(9, '¿Verdadero o falso? "There are" se usa para plural.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(9, 'Selecciona la frase correcta:', 'multiple_choice', '["There is two dogs", "There are two dogs"]', '["There are two dogs"]', NULL, NOW(), NOW()),
+(9, 'Completa: ___ a pencil in my bag.', 'short_answer', NULL, '["There is"]', NULL, NOW(), NOW()),
+(9, '¿Verdadero o falso? Se usa "There is" con sustantivos incontables.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(9, 'Selecciona la opción incorrecta:', 'multiple_choice', '["There is some milk", "There are some milk"]', '["There are some milk"]', NULL, NOW(), NOW()),
+(9, 'Completa: ___ a lot of people at the party.', 'short_answer', NULL, '["There are"]', NULL, NOW(), NOW()),
+(9, '¿Verdadero o falso? "There is" y "There are" se usan para expresar existencia.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(13, '¿Dónde está el gato si está "on" la mesa?', 'short_answer', NULL, '["on the table"]', NULL, NOW(), NOW()),
-(13, 'Selecciona la preposición correcta: The book is ___ the shelf.', 'multiple_choice', '["on", "under", "next to"]', '["on"]', NULL, NOW(), NOW()),
-(13, '¿Verdadero o falso? "Under" significa debajo.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(13, 'Completa: The keys are ___ the drawer.', 'short_answer', NULL, '["in"]', NULL, NOW(), NOW()),
-(13, 'Selecciona la frase correcta:', 'multiple_choice', '["The lamp is under the table", "The lamp is next the table", "The lamp is on next the table"]', '["The lamp is under the table"]', NULL, NOW(), NOW()),
-(13, '¿Verdadero o falso? "Next to" significa al lado de.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(13, 'Completa: The shoes are ___ the door.', 'short_answer', NULL, '["next to"]', NULL, NOW(), NOW()),
-(13, 'Selecciona la opción incorrecta:', 'multiple_choice', '["on", "under", "between", "abovee"]', '["abovee"]', NULL, NOW(), NOW()),
-(13, '¿Verdadero o falso? "In" significa dentro de.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(13, 'Selecciona la preposición correcta: The cat is ___ the box.', 'multiple_choice', '["on", "in", "under"]', '["in"]', NULL, NOW(), NOW());
+(10, '¿Dónde está el gato si está "on" la mesa?', 'short_answer', NULL, '["on the table"]', NULL, NOW(), NOW()),
+(10, 'Selecciona la preposición correcta: The book is ___ the shelf.', 'multiple_choice', '["on", "under", "next to"]', '["on"]', NULL, NOW(), NOW()),
+(10, '¿Verdadero o falso? "Under" significa debajo.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(10, 'Completa: The keys are ___ the drawer.', 'short_answer', NULL, '["in"]', NULL, NOW(), NOW()),
+(10, 'Selecciona la frase correcta:', 'multiple_choice', '["The lamp is under the table", "The lamp is next the table", "The lamp is on next the table"]', '["The lamp is under the table"]', NULL, NOW(), NOW()),
+(10, '¿Verdadero o falso? "Next to" significa al lado de.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(10, 'Completa: The shoes are ___ the door.', 'short_answer', NULL, '["next to"]', NULL, NOW(), NOW()),
+(10, 'Selecciona la opción incorrecta:', 'multiple_choice', '["on", "under", "between", "abovee"]', '["abovee"]', NULL, NOW(), NOW()),
+(10, '¿Verdadero o falso? "In" significa dentro de.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(10, 'Selecciona la preposición correcta: The cat is ___ the box.', 'multiple_choice', '["on", "in", "under"]', '["in"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(14, '¿Cómo se forma el Present Perfect?', 'short_answer', NULL, '["have/has + past participle"]', NULL, NOW(), NOW()),
-(14, 'Selecciona la frase correcta:', 'multiple_choice', '["She have gone", "She has gone", "She has went"]', '["She has gone"]', NULL, NOW(), NOW()),
-(14, 'Completa: I ___ (finish) my homework.', 'short_answer', NULL, '["have finished"]', NULL, NOW(), NOW()),
-(14, '¿Verdadero o falso? Present Perfect conecta el pasado con el presente.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(14, 'Selecciona la frase incorrecta:', 'multiple_choice', '["They have eaten", "They has eaten", "They have went"]', '["They has eaten", "They have went"]', NULL, NOW(), NOW()),
-(14, 'Completa: She ___ (go) to the store.', 'short_answer', NULL, '["has gone"]', NULL, NOW(), NOW()),
-(14, '¿Verdadero o falso? El Present Perfect se usa para acciones que terminaron en un tiempo no especificado.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(14, 'Selecciona el auxiliar para la tercera persona singular en Present Perfect.', 'multiple_choice', '["have", "has"]', '["has"]', NULL, NOW(), NOW()),
-(14, 'Completa: We ___ (see) that movie before.', 'short_answer', NULL, '["have seen"]', NULL, NOW(), NOW()),
-(14, '¿Verdadero o falso? Se usa "have" para I y you en Present Perfect.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
+(11, '¿Cómo se forma el Present Perfect?', 'short_answer', NULL, '["have/has + past participle"]', NULL, NOW(), NOW()),
+(11, 'Selecciona la frase correcta:', 'multiple_choice', '["She have gone", "She has gone", "She has went"]', '["She has gone"]', NULL, NOW(), NOW()),
+(11, 'Completa: I ___ (finish) my homework.', 'short_answer', NULL, '["have finished"]', NULL, NOW(), NOW()),
+(11, '¿Verdadero o falso? Present Perfect conecta el pasado con el presente.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(11, 'Selecciona la frase incorrecta:', 'multiple_choice', '["They have eaten", "They has eaten", "They have went"]', '["They has eaten", "They have went"]', NULL, NOW(), NOW()),
+(11, 'Completa: She ___ (go) to the store.', 'short_answer', NULL, '["has gone"]', NULL, NOW(), NOW()),
+(11, '¿Verdadero o falso? El Present Perfect se usa para acciones que terminaron en un tiempo no especificado.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(11, 'Selecciona el auxiliar para la tercera persona singular en Present Perfect.', 'multiple_choice', '["have", "has"]', '["has"]', NULL, NOW(), NOW()),
+(11, 'Completa: We ___ (see) that movie before.', 'short_answer', NULL, '["have seen"]', NULL, NOW(), NOW()),
+(11, '¿Verdadero o falso? Se usa "have" para I y you en Present Perfect.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(15, '¿Cómo se forma el Future Perfect?', 'short_answer', NULL, '["will have + past participle"]', NULL, NOW(), NOW()),
-(15, 'Selecciona la frase correcta:', 'multiple_choice', '["I will has finished", "I will have finished", "I will have finish"]', '["I will have finished"]', NULL, NOW(), NOW()),
-(15, 'Completa: By next year, she ___ (complete) her degree.', 'short_answer', NULL, '["will have completed"]', NULL, NOW(), NOW()),
-(15, '¿Verdadero o falso? El Future Perfect indica acciones que estarán completas en el futuro.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(15, 'Selecciona la opción incorrecta:', 'multiple_choice', '["They will have arrived", "They will have arrive", "They will have arrived"]', '["They will have arrive"]', NULL, NOW(), NOW()),
-(15, 'Completa: By tomorrow, I ___ (finish) the project.', 'short_answer', NULL, '["will have finished"]', NULL, NOW(), NOW()),
-(15, '¿Verdadero o falso? Se usa "will have" seguido del verbo en participio pasado.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(15, 'Selecciona el auxiliar correcto para Future Perfect.', 'multiple_choice', '["will", "have", "will have"]', '["will have"]', NULL, NOW(), NOW()),
-(15, 'Completa: By then, they ___ (leave).', 'short_answer', NULL, '["will have left"]', NULL, NOW(), NOW()),
-(15, '¿Verdadero o falso? Future Perfect indica acciones incompletas en el futuro.', 'true_false', NULL, '["false"]', NULL, NOW(), NOW());
+(12, '¿Cómo se forma el Future Perfect?', 'short_answer', NULL, '["will have + past participle"]', NULL, NOW(), NOW()),
+(12, 'Selecciona la frase correcta:', 'multiple_choice', '["I will has finished", "I will have finished", "I will have finish"]', '["I will have finished"]', NULL, NOW(), NOW()),
+(12, 'Completa: By next year, she ___ (complete) her degree.', 'short_answer', NULL, '["will have completed"]', NULL, NOW(), NOW()),
+(12, '¿Verdadero o falso? El Future Perfect indica acciones que estarán completas en el futuro.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(12, 'Selecciona la opción incorrecta:', 'multiple_choice', '["They will have arrived", "They will have arrive", "They will have arrived"]', '["They will have arrive"]', NULL, NOW(), NOW()),
+(12, 'Completa: By tomorrow, I ___ (finish) the project.', 'short_answer', NULL, '["will have finished"]', NULL, NOW(), NOW()),
+(12, '¿Verdadero o falso? Se usa "will have" seguido del verbo en participio pasado.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(12, 'Selecciona el auxiliar correcto para Future Perfect.', 'multiple_choice', '["will", "have", "will have"]', '["will have"]', NULL, NOW(), NOW()),
+(12, 'Completa: By then, they ___ (leave).', 'short_answer', NULL, '["will have left"]', NULL, NOW(), NOW()),
+(12, '¿Verdadero o falso? Future Perfect indica acciones incompletas en el futuro.', 'true_false', NULL, '["false"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(16, '¿Qué tipo de condicional es: "If it rains, I will stay home"?', 'multiple_choice', '["Zero", "First", "Second", "Third"]', '["First"]', NULL, NOW(), NOW()),
-(16, 'Completa: If I ___ (be) you, I would study more.', 'short_answer', NULL, '["were"]', NULL, NOW(), NOW()),
-(16, '¿Verdadero o falso? El condicional cero expresa hechos generales.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(16, 'Selecciona la frase correcta de condicional segundo:', 'multiple_choice', '["If I was rich, I will travel", "If I were rich, I would travel"]', '["If I were rich, I would travel"]', NULL, NOW(), NOW()),
-(16, 'Completa: If she ___ (have) time, she will come.', 'short_answer', NULL, '["has"]', NULL, NOW(), NOW()),
-(16, '¿Verdadero o falso? El condicional primero habla de situaciones reales o posibles.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(16, 'Selecciona el condicional que usa "would + verbo base".', 'multiple_choice', '["First", "Second", "Third"]', '["Second"]', NULL, NOW(), NOW()),
-(16, 'Completa: If he ___ (study) harder, he would pass the exam.', 'short_answer', NULL, '["studied"]', NULL, NOW(), NOW()),
-(16, '¿Verdadero o falso? El condicional tercero habla de situaciones hipotéticas pasadas.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(16, 'Selecciona la frase incorrecta:', 'multiple_choice', '["If I had known, I would have come", "If I would have known, I would come"]', '["If I would have known, I would come"]', NULL, NOW(), NOW());
+(13, '¿Qué tipo de condicional es: "If it rains, I will stay home"?', 'multiple_choice', '["Zero", "First", "Second", "Third"]', '["First"]', NULL, NOW(), NOW()),
+(13, 'Completa: If I ___ (be) you, I would study more.', 'short_answer', NULL, '["were"]', NULL, NOW(), NOW()),
+(13, '¿Verdadero o falso? El condicional cero expresa hechos generales.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(13, 'Selecciona la frase correcta de condicional segundo:', 'multiple_choice', '["If I was rich, I will travel", "If I were rich, I would travel"]', '["If I were rich, I would travel"]', NULL, NOW(), NOW()),
+(13, 'Completa: If she ___ (have) time, she will come.', 'short_answer', NULL, '["has"]', NULL, NOW(), NOW()),
+(13, '¿Verdadero o falso? El condicional primero habla de situaciones reales o posibles.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(13, 'Selecciona el condicional que usa "would + verbo base".', 'multiple_choice', '["First", "Second", "Third"]', '["Second"]', NULL, NOW(), NOW()),
+(13, 'Completa: If he ___ (study) harder, he would pass the exam.', 'short_answer', NULL, '["studied"]', NULL, NOW(), NOW()),
+(13, '¿Verdadero o falso? El condicional tercero habla de situaciones hipotéticas pasadas.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(13, 'Selecciona la frase incorrecta:', 'multiple_choice', '["If I had known, I would have come", "If I would have known, I would come"]', '["If I would have known, I would come"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(17, '¿Cómo se forma la voz pasiva en presente?', 'short_answer', NULL, '["am/is/are + past participle"]', NULL, NOW(), NOW()),
-(17, 'Selecciona la frase pasiva correcta:', 'multiple_choice', '["The book is wrote by him", "The book is written by him", "The book was write by him"]', '["The book is written by him"]', NULL, NOW(), NOW()),
-(17, 'Completa: The letters ___ (send) yesterday.', 'short_answer', NULL, '["were sent"]', NULL, NOW(), NOW()),
-(17, '¿Verdadero o falso? La voz pasiva enfoca la acción, no quién la realiza.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(17, 'Selecciona la forma correcta en pasado:', 'multiple_choice', '["was wrote", "was written", "were wrote"]', '["was written"]', NULL, NOW(), NOW()),
-(17, 'Completa: The cake ___ (make) by my mother.', 'short_answer', NULL, '["was made"]', NULL, NOW(), NOW()),
-(17, '¿Verdadero o falso? En voz pasiva, el sujeto recibe la acción.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(17, 'Selecciona la frase incorrecta:', 'multiple_choice', '["The car was cleaned", "The car were cleaned", "The car is cleaned"]', '["The car were cleaned"]', NULL, NOW(), NOW()),
-(17, 'Completa: The homework ___ (do) by the students.', 'short_answer', NULL, '["was done"]', NULL, NOW(), NOW()),
-(17, '¿Verdadero o falso? La voz pasiva puede usarse en todos los tiempos verbales.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
+(14, '¿Cómo se forma la voz pasiva en presente?', 'short_answer', NULL, '["am/is/are + past participle"]', NULL, NOW(), NOW()),
+(14, 'Selecciona la frase pasiva correcta:', 'multiple_choice', '["The book is wrote by him", "The book is written by him", "The book was write by him"]', '["The book is written by him"]', NULL, NOW(), NOW()),
+(14, 'Completa: The letters ___ (send) yesterday.', 'short_answer', NULL, '["were sent"]', NULL, NOW(), NOW()),
+(14, '¿Verdadero o falso? La voz pasiva enfoca la acción, no quién la realiza.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(14, 'Selecciona la forma correcta en pasado:', 'multiple_choice', '["was wrote", "was written", "were wrote"]', '["was written"]', NULL, NOW(), NOW()),
+(14, 'Completa: The cake ___ (make) by my mother.', 'short_answer', NULL, '["was made"]', NULL, NOW(), NOW()),
+(14, '¿Verdadero o falso? En voz pasiva, el sujeto recibe la acción.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(14, 'Selecciona la frase incorrecta:', 'multiple_choice', '["The car was cleaned", "The car were cleaned", "The car is cleaned"]', '["The car were cleaned"]', NULL, NOW(), NOW()),
+(14, 'Completa: The homework ___ (do) by the students.', 'short_answer', NULL, '["was done"]', NULL, NOW(), NOW()),
+(14, '¿Verdadero o falso? La voz pasiva puede usarse en todos los tiempos verbales.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(18, '¿Cómo cambia "I am tired" en estilo indirecto?', 'short_answer', NULL, '["He said he was tired"]', NULL, NOW(), NOW()),
-(18, 'Selecciona la forma correcta:', 'multiple_choice', '["She said she is tired", "She said she was tired"]', '["She said she was tired"]', NULL, NOW(), NOW()),
-(18, 'Completa: He said he ___ (go) to the store.', 'short_answer', NULL, '["went"]', NULL, NOW(), NOW()),
-(18, '¿Verdadero o falso? El estilo indirecto requiere cambio de tiempo verbal.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(18, 'Selecciona la frase incorrecta:', 'multiple_choice', '["He said he was tired", "He said he is tired"]', '["He said he is tired"]', NULL, NOW(), NOW()),
-(18, 'Completa: She said she ___ (have) a meeting.', 'short_answer', NULL, '["had"]', NULL, NOW(), NOW()),
-(18, '¿Verdadero o falso? En estilo indirecto, "will" cambia a "would".', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
-(18, 'Selecciona la frase correcta:', 'multiple_choice', '["They said they will come", "They said they would come"]', '["They said they would come"]', NULL, NOW(), NOW()),
-(18, 'Completa: He said he ___ (can) swim.', 'short_answer', NULL, '["could"]', NULL, NOW(), NOW()),
-(18, '¿Verdadero o falso? En reported speech, los pronombres también cambian.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
+(15, '¿Cómo cambia "I am tired" en estilo indirecto?', 'short_answer', NULL, '["He said he was tired"]', NULL, NOW(), NOW()),
+(15, 'Selecciona la forma correcta:', 'multiple_choice', '["She said she is tired", "She said she was tired"]', '["She said she was tired"]', NULL, NOW(), NOW()),
+(15, 'Completa: He said he ___ (go) to the store.', 'short_answer', NULL, '["went"]', NULL, NOW(), NOW()),
+(15, '¿Verdadero o falso? El estilo indirecto requiere cambio de tiempo verbal.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(15, 'Selecciona la frase incorrecta:', 'multiple_choice', '["He said he was tired", "He said he is tired"]', '["He said he is tired"]', NULL, NOW(), NOW()),
+(15, 'Completa: She said she ___ (have) a meeting.', 'short_answer', NULL, '["had"]', NULL, NOW(), NOW()),
+(15, '¿Verdadero o falso? En estilo indirecto, "will" cambia a "would".', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),
+(15, 'Selecciona la frase correcta:', 'multiple_choice', '["They said they will come", "They said they would come"]', '["They said they would come"]', NULL, NOW(), NOW()),
+(15, 'Completa: He said he ___ (can) swim.', 'short_answer', NULL, '["could"]', NULL, NOW(), NOW()),
+(15, '¿Verdadero o falso? En reported speech, los pronombres también cambian.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW());
 
 

@@ -1,4 +1,4 @@
-@extends('dashboard')
+@extends('layouts.dashboard')
 
 @section('content')
 <h1 class="text-3xl font-extrabold mb-6">Exercises for: {{ $lesson->title }}</h1>
