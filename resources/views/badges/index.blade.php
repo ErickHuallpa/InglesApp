@@ -35,7 +35,6 @@
             @endforeach
         </div>
     @endforeach
-
 </div>
 
 <div id="badgeModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50">
@@ -65,8 +64,7 @@
                 <input type="text" name="level" id="level" class="w-full border border-gray-300 rounded px-3 py-2" required>
             </div>
             <div class="flex justify-end space-x-2">
-                <button type="button" onclick="closeModal()" 
-                    class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">
+                <button type="button" onclick="closeModal()" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">
                     Cancelar
                 </button>
                 <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
@@ -106,7 +104,7 @@
         form.reset();
         document.getElementById('badgeModal').classList.remove('hidden');
     }
-
+    
     function openModalForEdit(badge) {
         document.getElementById('modalTitle').textContent = 'Editar Insignia';
         const form = document.getElementById('badgeForm');

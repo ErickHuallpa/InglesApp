@@ -114,23 +114,19 @@
                 @csrf
                 <div class="mb-4">
                     <label for="word" class="block font-semibold mb-1">Word <span class="text-red-500">*</span></label>
-                    <input type="text" id="word" name="word" required
-                        class="w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-green-500 outline-none" />
+                    <input type="text" id="word" name="word" required class="w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-green-500 outline-none" />
                 </div>
                 <div class="mb-4">
                     <label for="translate" class="block font-semibold mb-1">Translate <span class="text-red-500">*</span></label>
-                    <input type="text" id="translate" name="translate" required
-                        class="w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-green-500 outline-none" />
+                    <input type="text" id="translate" name="translate" required class="w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-green-500 outline-none" />
                 </div>
                 <div class="mb-4">
                     <label for="example" class="block font-semibold mb-1">Example</label>
-                    <input type="text" id="example" name="example"
-                        class="w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-green-500 outline-none" />
+                    <input type="text" id="example" name="example" class="w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-green-500 outline-none" />
                 </div>
                 <div class="mb-4">
                     <label for="pronunciation" class="block font-semibold mb-1">Pronunciation</label>
-                    <input type="text" id="pronunciation" name="pronunciation"
-                        class="w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-green-500 outline-none" />
+                    <input type="text" id="pronunciation" name="pronunciation" class="w-full border border-gray-300 rounded px-3 py-2 focus:ring-2 focus:ring-green-500 outline-none" />
                 </div>
                 <div class="flex justify-end space-x-2">
                     <button type="button" id="closeModalBtn" class="px-4 py-2 rounded border border-gray-300 hover:bg-gray-100">

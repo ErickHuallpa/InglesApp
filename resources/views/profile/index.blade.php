@@ -52,11 +52,7 @@
 
 <div id="editModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
     <div class="bg-white rounded-xl shadow-2xl p-8 w-full max-w-lg relative">
-        <button 
-            onclick="document.getElementById('editModal').classList.add('hidden')"
-            class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl"
-            title="Cerrar"
-        >
+        <button onclick="document.getElementById('editModal').classList.add('hidden')" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl" title="Cerrar">
             &times;
         </button>
 
@@ -64,17 +60,9 @@
         <form method="POST" action="{{ route('profile.update') }}" class="space-y-5">
             @csrf
             @method('PUT')
-
             <div>
                 <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
-                <input 
-                    type="text" 
-                    name="name" 
-                    id="name" 
-                    value="{{ old('name', $user->name) }}" 
-                    class="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
-                    required
-                >
+                <input type="text" name="name" id="name" value="{{ old('name', $user->name) }}" class="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" required>
                 @error('name')
                     <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
                 @enderror
@@ -82,14 +70,7 @@
 
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                <input 
-                    type="email" 
-                    name="email" 
-                    id="email" 
-                    value="{{ old('email', $user->email) }}" 
-                    class="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
-                    required
-                >
+                <input type="email" name="email" id="email" value="{{ old('email', $user->email) }}" class="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" required>
                 @error('email')
                     <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
                 @enderror
@@ -97,13 +78,7 @@
 
             <div>
                 <label for="password" class="block text-sm font-medium text-gray-700">Nueva contraseña</label>
-                <input 
-                    type="password" 
-                    name="password" 
-                    id="password" 
-                    class="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
-                    placeholder="(Opcional)"
-                >
+                <input type="password" name="password" id="password" class="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500" placeholder="(Opcional)">
                 @error('password')
                     <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
                 @enderror
@@ -111,26 +86,13 @@
 
             <div>
                 <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirmar contraseña</label>
-                <input 
-                    type="password" 
-                    name="password_confirmation" 
-                    id="password_confirmation" 
-                    class="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500"
-                >
+                <input type="password" name="password_confirmation" id="password_confirmation" class="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500">
             </div>
-
             <div class="flex justify-end gap-2">
-                <button 
-                    type="button" 
-                    onclick="document.getElementById('editModal').classList.add('hidden')"
-                    class="px-4 py-2 border rounded hover:bg-gray-100 transition"
-                >
+                <button type="button" onclick="document.getElementById('editModal').classList.add('hidden')" class="px-4 py-2 border rounded hover:bg-gray-100 transition">
                     Cancelar
                 </button>
-                <button 
-                    type="submit" 
-                    class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-                >
+                <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
                     Guardar cambios
                 </button>
             </div>

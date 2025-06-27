@@ -8,18 +8,16 @@
     use Illuminate\Support\Facades\Auth;
 @endphp
 
-@if(Auth::check() && Auth::user()->role_id === 1)
+@if(Auth::check() && Auth::user()->role_id === 1 || Auth::user()->role_id === 3)
     <button onclick="openModal()" class="mb-8 bg-green-600 text-white px-5 py-3 rounded-lg shadow hover:bg-green-700 transition">
         + Add Lesson
     </button>
 @endif
 
-
 @foreach($groupedLessons as $level => $lessons)
     <h2 class="text-xl font-bold mt-8 mb-4 text-gray-800">
         {{ ucfirst($level) }} Level
     </h2>
-
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
         @foreach($lessons as $lesson)
             <div class="rounded-lg shadow p-3 relative
@@ -65,28 +63,23 @@
     </div>
 @endforeach
 
-
 <div id="lessonModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
     <div class="bg-white rounded-lg p-8 w-full max-w-xl relative shadow-lg">
-        <button 
-            class="absolute top-5 right-5 text-gray-500 hover:text-gray-900 text-3xl font-bold leading-none" onclick="closeModal()" aria-label="Close modal">
+        <button class="absolute top-5 right-5 text-gray-500 hover:text-gray-900 text-3xl font-bold leading-none" onclick="closeModal()" aria-label="Close modal">
             &times;
         </button>
         <h3 class="text-2xl font-bold mb-6" id="modalTitle">Add Lesson</h3>
         <form method="POST" action="{{ route('lessons.store') }}">
             @csrf
-            <input type="hidden" name="id" id="lessonId" />
-
+            <input type="hidden" name="id" id="lessonId"/>
             <label class="block mb-4">
                 <span class="font-semibold">Title</span>
                 <input type="text" name="title" id="title" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-400"required/>
             </label>
-
             <label class="block mb-4">
                 <span class="font-semibold">Description</span>
                 <textarea name="description" id="description" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
             </label>
-
             <label class="block mb-4">
                 <span class="font-semibold">Level</span>
                 <select name="level" id="level" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-400"required>
@@ -96,7 +89,6 @@
                     <option value="advanced">Advanced</option>
                 </select>
             </label>
-
             <label class="block mb-4">
                 <span class="font-semibold">Order</span>
                 <input type="number" name="order" id="order" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-400" value="0"/>
@@ -111,11 +103,9 @@
         </form>
     </div>
 </div>
-
 <script>
     function openModal(lesson = null) {
         document.getElementById('lessonModal').classList.remove('hidden');
-
         if (lesson) {
             document.getElementById('modalTitle').textContent = 'Edit Lesson';
             document.getElementById('lessonId').value = lesson.id;
@@ -139,5 +129,4 @@
         document.getElementById('lessonModal').classList.add('hidden');
     }
 </script>
-
 @endsection

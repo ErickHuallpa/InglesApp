@@ -19,20 +19,13 @@
     <h2 class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto text-center leading-relaxed">
         Estos son nuestros cursos de inglés listos para que empieces a aprender y avances a tu propio ritmo.
     </h2>
-
     <div class="max-w-6xl mx-auto flex justify-center gap-8">
         @foreach ($orderedLevels as $level)
-            <div 
-                class="bg-white rounded-3xl shadow-lg max-w-sm cursor-pointer flex flex-col items-center p-8 hover:shadow-2xl transition relative"
-                onclick="openModal('{{ $level }}')"
-            >
+            <div class="bg-white rounded-3xl shadow-lg max-w-sm cursor-pointer flex flex-col items-center p-8 hover:shadow-2xl transition relative" onclick="openModal('{{ $level }}')">
                 <img src="{{ $levelImages[$level] }}" alt="{{ $level }} illustration" class="w-full h-auto mb-6">
                 <h2 class="text-3xl font-extrabold mb-3 text-center text-green-700 tracking-tight">{{ $level }}</h2>
                 <p class="text-gray-700 mb-8 text-center leading-relaxed px-2">{{ $levelDescriptions[$level] }}</p>
-                <button 
-                    class="bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700 transition font-semibold tracking-wide"
-                    type="button"
-                >
+                <button class="bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700 transition font-semibold tracking-wide" type="button">
                     Ver lecciones
                 </button>
             </div>

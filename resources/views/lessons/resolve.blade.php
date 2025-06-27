@@ -11,20 +11,17 @@
 
     <form id="exerciseForm" action="{{ route('lessons.resolve.submit', $lesson->id) }}" method="POST" autocomplete="off" class="w-full max-w-2xl px-4">
         @csrf
-
         <div id="exerciseContainer">
             @foreach($exercises as $index => $exercise)
             <div class="exercise-step hidden transition duration-500 ease-in-out transform" data-index="{{ $index }}" data-correct="{{ implode(',', $exercise->correct_answer) }}">
                 <div class="bg-white p-6 rounded-2xl shadow-xl border-2 border-green-100 flex flex-col gap-4">
                     <p class="text-xl font-bold text-green-800">Pregunta {{ $index + 1 }}:</p>
                     <p class="text-lg font-medium text-gray-800">{{ $exercise->question }}</p>
-
                     @if($exercise->media_url)
                         <div class="flex justify-center">
                             <img src="{{ $exercise->media_url }}" alt="media" class="rounded-lg max-h-60 object-contain" />
                         </div>
                     @endif
-
                     @if($exercise->type === 'multiple_choice')
                         <div class="grid gap-3">
                             @foreach($exercise->options as $option)
@@ -52,7 +49,6 @@
             </div>
             @endforeach
         </div>
-
         <div class="flex justify-between items-center mt-8">
             <button type="button" onclick="prevExercise()" id="prevBtn" class="flex items-center gap-2 bg-gray-300 px-6 py-2 rounded-lg hover:bg-gray-400 hidden transition-all">
                 <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -60,14 +56,12 @@
                 </svg>
                 Anterior
             </button>
-
             <button type="button" onclick="nextExercise()" id="nextBtn" class="flex items-center gap-2 bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-all">
                 Siguiente
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z" clip-rule="evenodd" />
                 </svg>
             </button>
-
             <button type="button" onclick="submitExercises()" id="submitBtn" class="flex items-center gap-2 bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 hidden transition-all">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2ZM7.99 9a1 1 0 0 1 1-1H9a1 1 0 0 1 0 2h-.01a1 1 0 0 1-1-1ZM14 9a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2H15a1 1 0 0 1-1-1Zm-5.506 7.216A5.5 5.5 0 0 1 6.6 13h10.81a5.5 5.5 0 0 1-8.916 3.216Z" clip-rule="evenodd" />
