@@ -27,10 +27,10 @@
                 onclick="openModal('{{ $level }}')"
             >
                 <img src="{{ $levelImages[$level] }}" alt="{{ $level }} illustration" class="w-full h-auto mb-6">
-                <h2 class="text-3xl font-extrabold mb-3 text-center text-blue-700 tracking-tight">{{ $level }}</h2>
+                <h2 class="text-3xl font-extrabold mb-3 text-center text-green-700 tracking-tight">{{ $level }}</h2>
                 <p class="text-gray-700 mb-8 text-center leading-relaxed px-2">{{ $levelDescriptions[$level] }}</p>
                 <button 
-                    class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition font-semibold tracking-wide"
+                    class="bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700 transition font-semibold tracking-wide"
                     type="button"
                 >
                     Ver lecciones

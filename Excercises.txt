@@ -36,7 +36,7 @@ VALUES
 (3, '¿Cuál es la forma correcta para "I" en presente simple?', 'multiple_choice', '["wakes", "wake", "waking"]', '["wake"]', NULL, NOW(), NOW()),
 (3, 'Traduce: "Ella camina al parque".', 'short_answer', NULL, '["She walks to the park"]', NULL, NOW(), NOW()),
 (3, 'Selecciona la oración correcta:', 'multiple_choice', '["They goes to school", "They go to school", "They going to school"]', '["They go to school"]', NULL, NOW(), NOW()),
-(3, 'Completa: We ___ dinner at 7pm.', 'short_answer', NULL, '["eat"]', NULL, NOW(), NOW()),
+(3, 'Completa: We ___ dinner at 7pm.', 'short_answe r', NULL, '["eat"]', NULL, NOW(), NOW()),
 (3, '¿Cuál es la forma correcta para "He" en presente simple?', 'multiple_choice', '["eat", "eats", "eating"]', '["eats"]', NULL, NOW(), NOW()),
 (3, 'Traduce: "Tú estudias inglés".', 'short_answer', NULL, '["You study English"]', NULL, NOW(), NOW()),
 (3, '¿Cómo se dice "Ellos leen libros"?', 'short_answer', NULL, '["They read books"]', NULL, NOW(), NOW());
@@ -173,7 +173,6 @@ VALUES
 
 INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
 VALUES
-(14, '¿Cómo se forma la voz pasiva en presente?', 'short_answer', NULL, '["am/is/are + past participle"]', NULL, NOW(), NOW()),
 (14, 'Selecciona la frase pasiva correcta:', 'multiple_choice', '["The book is wrote by him", "The book is written by him", "The book was write by him"]', '["The book is written by him"]', NULL, NOW(), NOW()),
 (14, 'Completa: The letters ___ (send) yesterday.', 'short_answer', NULL, '["were sent"]', NULL, NOW(), NOW()),
 (14, '¿Verdadero o falso? La voz pasiva enfoca la acción, no quién la realiza.', 'true_false', NULL, '["true"]', NULL, NOW(), NOW()),

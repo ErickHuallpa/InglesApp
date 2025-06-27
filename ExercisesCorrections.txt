@@ -1,0 +1,50 @@
+SELECT id, lesson_id, question, "type", "options", correct_answer, media_url, created_at, updated_at
+FROM public.exercises;
+
+
+UPDATE exercises
+SET 
+    question = 'Selecciona la estructura correcta del presente continuo para el sujeto ''she''.',
+    type = 'multiple_choice',
+    options = '["She is eat", "She eating", "She is eating"]',
+    correct_answer = '["She is eating"]',
+    updated_at = NOW()
+WHERE id = 51;
+
+UPDATE exercises
+SET 
+    question = 'Completa: Yesterday, I ___ (visit) my grandmother.',
+    type = 'short_answer',
+    options = NULL,
+    correct_answer = '["visited"]',
+    updated_at = NOW()
+WHERE id = 62;
+
+UPDATE exercises
+SET 
+    question = 'Completa: She ___ (live) in London since 2015.',
+    type = 'short_answer',
+    options = NULL,
+    correct_answer = '["has lived"]',
+    updated_at = NOW()
+WHERE id = 101;
+
+UPDATE exercises
+SET 
+    question = 'Completa: By next year, they ___ (finish) the project.',
+    type = 'short_answer',
+    options = NULL,
+    correct_answer = '["will have finished"]',
+    updated_at = NOW()
+WHERE id = 111;
+
+UPDATE exercises
+SET 
+    question = 'Completa: The cake ___ (make) by my grandma.',
+    type = 'short_answer',
+    options = NULL,
+    correct_answer = '["is made"]',
+    updated_at = NOW()
+WHERE id = 131;
+
+

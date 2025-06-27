@@ -37,7 +37,7 @@ class LessonResolveController extends Controller
                     $score++;
                 }
             } else {
-                if (in_array(trim($userAnswer), $correctAnswers)) {
+                if (in_array(trim(strtolower($userAnswer)), array_map('strtolower', $correctAnswers))) {
                     $score++;
                 }
             }
@@ -45,32 +45,36 @@ class LessonResolveController extends Controller
 
         $user = Auth::user();
         $total = $exercises->count();
-        $message = "Puntuación: $score / $total.";
 
+        $message = "Respondiste $score de $total correctamente.";
+        $earnedBadge = false;
 
         if ($score === $total) {
             UserProgress::updateOrCreate(
                 ['user_id' => $user->id, 'lesson_id' => $lesson->id],
                 ['completed_at' => now()]
             );
+
             $this->checkUserLevel($user);
+
             foreach ($lesson->badges as $badge) {
                 $alreadyHas = $user->badges()->where('badge_id', $badge->id)->exists();
                 if (!$alreadyHas) {
                     $user->badges()->attach($badge->id, ['achieved_at' => now()]);
+                    $earnedBadge = true;
                 }
             }
 
-            $message = "¡Lección completada! Obtuviste todos los puntos ($score / $total).";
-            return redirect()->route('lessons.index')->with([
-                'success' => $message,
-                'success_type' => 'full'
-            ]);
+            $message = "🎉 ¡Lección completada! Obtuviste la insignia. Puntaje: $score / $total";
+        } else {
+            $message = "🔔 Resolviste $score/$total correctas. No alcanzaste para obtener la insignia.";
         }
-        
-        return redirect()->route('lessons.index')->with([
-            'success' => "Puntuación obtenida: $score / $total. Debes responder todo correctamente.",
-            'success_type' => 'partial'
+
+        return response()->json([
+            'score' => $score,
+            'total' => $total,
+            'badge' => $earnedBadge,
+            'message' => $message,
         ]);
     }
 

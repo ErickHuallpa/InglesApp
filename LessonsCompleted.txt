@@ -1,0 +1,47 @@
+SELECT id, user_id, lesson_id, completed_at, created_at, updated_at
+FROM public.user_progress;
+
+INSERT INTO exercises (lesson_id, question, type, options, correct_answer, media_url, created_at, updated_at)
+VALUES
+
+
+insert into user_progress (user_id, lesson_id, completed_at , created_at, updated_at )
+values
+(1, 1, NOW(), NOW(), NOW()),
+(1, 2, NOW(), NOW(), NOW()),
+(1, 3, NOW(), NOW(), NOW()),
+(1, 4, NOW(), NOW(), NOW()),
+(1, 5, NOW(), NOW(), NOW()),
+(1, 6, NOW(), NOW(), NOW()),
+(1, 7, NOW(), NOW(), NOW()),
+(1, 8, NOW(), NOW(), NOW()),
+(1, 9, NOW(), NOW(), NOW()),
+(1, 10, NOW(), NOW(), NOW()),
+(1, 11, NOW(), NOW(), NOW()),
+(1, 12, NOW(), NOW(), NOW()),
+(1, 13, NOW(), NOW(), NOW()),
+(1, 14, NOW(), NOW(), NOW()),
+(1, 15, NOW(), NOW(), NOW())
+
+
+select * from user_badges
+
+insert into user_badges (user_id , badge_id, achieved_at, created_at, updated_at)
+values
+(1, 1, NOW(), NOW(), NOW()),
+(1, 2, NOW(), NOW(), NOW()),
+(1, 3, NOW(), NOW(), NOW()),
+(1, 4, NOW(), NOW(), NOW()),
+(1, 5, NOW(), NOW(), NOW()),
+(1, 6, NOW(), NOW(), NOW()),
+(1, 7, NOW(), NOW(), NOW()),
+(1, 8, NOW(), NOW(), NOW()),
+(1, 9, NOW(), NOW(), NOW()),
+(1, 10, NOW(), NOW(), NOW()),
+(1, 11, NOW(), NOW(), NOW()),
+(1, 12, NOW(), NOW(), NOW()),
+(1, 13, NOW(), NOW(), NOW()),
+(1, 14, NOW(), NOW(), NOW()),
+(1, 15, NOW(), NOW(), NOW())
+
+select * from users

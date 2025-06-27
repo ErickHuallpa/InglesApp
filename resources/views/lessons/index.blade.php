@@ -9,7 +9,7 @@
 @endphp
 
 @if(Auth::check() && Auth::user()->role_id === 1)
-    <button onclick="openModal()" class="mb-8 bg-blue-600 text-white px-5 py-3 rounded-lg shadow hover:bg-blue-700 transition">
+    <button onclick="openModal()" class="mb-8 bg-green-600 text-white px-5 py-3 rounded-lg shadow hover:bg-green-700 transition">
         + Add Lesson
     </button>
 @endif
@@ -24,13 +24,13 @@
         @foreach($lessons as $lesson)
             <div class="rounded-lg shadow p-3 relative
                 {{ 
-                    $level === 'basic' ? 'bg-blue-50 border-l-4 border-blue-500' : 
+                    $level === 'basic' ? 'bg-green-50 border-l-4 border-green-500' : 
                     ($level === 'intermediate' ? 'bg-yellow-50 border-l-4 border-yellow-400' : 
                     'bg-green-50 border-l-4 border-green-500') 
                 }}">
                 <div class="flex justify-center mb-1">
                     @if($level === 'basic')
-                        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10" />
                             <path d="M12 6v6l4 2" />
                         </svg>
@@ -47,7 +47,7 @@
                 <h3 class="font-semibold text-sm text-center text-gray-900 mb-1 truncate" title="{{ $lesson->title }}">{{ $lesson->title }}</h3>
                 <p class="text-xs text-gray-600 mb-1 truncate" title="{{ $lesson->description }}">{{ $lesson->description }}</p>
                 <p class="text-xs text-gray-500 text-center"><strong>Order:</strong> {{ $lesson->order }}</p>
-                <button class="absolute top-2 right-2 text-blue-600 hover:text-blue-800"onclick="openModal({{ $lesson }})"aria-label="Edit Lesson"title="Edit Lesson">
+                <button class="absolute top-2 right-2 text-green-600 hover:text-green-800"onclick="openModal({{ $lesson }})"aria-label="Edit Lesson"title="Edit Lesson">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M11 17h2M12 14v3m-4-7l3 3m-3-3a2.5 2.5 0 013.54 0l3 3a2.5 2.5 0 010 3.54l-3 3a2.5 2.5 0 01-3.54 0l-3-3a2.5 2.5 0 010-3.54l3-3z" />
                     </svg>
@@ -79,17 +79,17 @@
 
             <label class="block mb-4">
                 <span class="font-semibold">Title</span>
-                <input type="text" name="title" id="title" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-400"required/>
+                <input type="text" name="title" id="title" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-400"required/>
             </label>
 
             <label class="block mb-4">
                 <span class="font-semibold">Description</span>
-                <textarea name="description" id="description" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+                <textarea name="description" id="description" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
             </label>
 
             <label class="block mb-4">
                 <span class="font-semibold">Level</span>
-                <select name="level" id="level" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-400"required>
+                <select name="level" id="level" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-400"required>
                     <option value="">Select Level</option>
                     <option value="basic">Basic</option>
                     <option value="intermediate">Intermediate</option>
@@ -99,13 +99,13 @@
 
             <label class="block mb-4">
                 <span class="font-semibold">Order</span>
-                <input type="number" name="order" id="order" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-400" value="0"/>
+                <input type="number" name="order" id="order" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-green-400" value="0"/>
             </label>
             <label class="block mb-6">
                 <span class="font-semibold">Content (JSON)</span>
                 <textarea name="content" id="content" class="w-full border border-gray-300 rounded px-4 py-2 mt-1 font-mono text-sm" rows="6" placeholder='Ejemplo: {"text":"Hola"}'></textarea>
             </label>
-            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+            <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition">
                 Save Lesson
             </button>
         </form>

@@ -4,7 +4,7 @@
 <div class="w-full px-4 mx-auto">
     <h1 class="text-2xl font-semibold mb-6">Insignias</h1>
     @if (auth()->user()->role_id == 1)
-    <button onclick="openModalForCreate()" class="mb-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+    <button onclick="openModalForCreate()" class="mb-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
         + Add Badge
     </button>
     @endif
@@ -19,7 +19,7 @@
                     <p class="text-xs">{{ $badge->description }}</p>
                     @if (auth()->user()->role_id == 1)
                     <div class="absolute top-1 right-1 flex space-x-1">
-                        <button onclick="openModalForEdit({{ $badge }})" class="text-blue-600 hover:text-blue-800 text-sm" title="Editar">
+                        <button onclick="openModalForEdit({{ $badge }})" class="text-green-600 hover:text-green-800 text-sm" title="Editar">
                             <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"/>
                             </svg>
