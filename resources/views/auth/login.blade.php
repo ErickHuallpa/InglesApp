@@ -9,7 +9,7 @@
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
         <h1 class="text-5xl font-black text-gray-900 text-center tracking-tight">
-            Ingles<span class="text-green-800">App</span>
+            English<span class="text-green-800">App</span>
         </h1>
         <h3 class="text-2xl font-bold mb-6 mt-6">Iniciar sesión</h3>
         @if ($errors->any())

@@ -67,7 +67,7 @@
     <main class="flex-grow flex flex-col">
         <header class="w-full bg-white p-6 border-b border-gray-200 flex items-center justify-between shadow-sm">
             <h1 class="text-5xl font-black text-gray-900 tracking-tight">
-                Ingles<span class="text-green-800">App</span>
+                English<span class="text-green-800">App</span>
             </h1>
             <div class="flex items-center space-x-4">
                 <div class="flex items-center space-x-3">
