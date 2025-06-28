@@ -9,6 +9,7 @@ use App\Http\Controllers\BadgeController;
 use App\Http\Controllers\VocabularyController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WordController;
 use App\Http\Middleware\CheckRole;
 
 Route::get('/', function () {
@@ -43,6 +44,7 @@ Route::middleware([
     Route::get('/vocabulary', [VocabularyController::class, 'index'])->name('vocabulary.index');
     Route::post('/vocabulary', [VocabularyController::class, 'store'])->name('vocabulary.store');
     Route::get('/home/index', [HomeController::class, 'index'])->middleware('auth')->name('home.index');
+    Route::get('/words', [WordController::class, 'index'])->name('words.index');
 
     Route::middleware([CheckRole::class])->group(function () {
         Route::post('badges', [BadgeController::class, 'store'])->name('badges.store');

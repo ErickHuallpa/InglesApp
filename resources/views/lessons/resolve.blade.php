@@ -82,7 +82,7 @@
 <div id="finalModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
     <div class="bg-white rounded-2xl p-8 w-full max-w-md text-center shadow-2xl border-t-4 border-purple-500">
         <p id="finalMessage" class="text-2xl font-bold text-gray-800 mb-6"></p>
-        <button onclick="window.location.href='{{ route('lessons.index') }}'" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
+        <button onclick="window.location.href='{{ route('home.index') }}'" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
             </svg>
@@ -205,5 +205,26 @@
     }
 
     showStep(currentStep);
+    document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+
+        const feedbackModal = document.getElementById('feedbackModal');
+        const finalModal = document.getElementById('finalModal');
+        const nextBtnVisible = !document.getElementById('nextBtn').classList.contains('hidden');
+        const submitBtnVisible = !document.getElementById('submitBtn').classList.contains('hidden');
+
+        if (!feedbackModal.classList.contains('hidden')) {
+            closeFeedbackModal();
+        } else if (!finalModal.classList.contains('hidden')) {
+            finalModal.querySelector('button').click();
+        } else if (nextBtnVisible) {
+            nextExercise();
+        } else if (submitBtnVisible) {
+            submitExercises();
+        }
+    }
+});
+
 </script>
 @endsection

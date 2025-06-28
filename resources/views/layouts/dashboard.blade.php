@@ -12,60 +12,9 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex text-gray-800">
-    <aside class="w-64 bg-white shadow-xl border-r border-gray-200 flex flex-col">
-        <div class="flex justify-center items-center py-6">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-16 w-auto">
-        </div>
-        <nav class="flex-grow pl-3 space-y-4">
-            <a href="{{ route('home.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-green-50 transition">
-                <svg class="w-6 h-6 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/>
-                </svg>
-                <span class="font-semibold">Home</span>
-            </a>
-            @if(auth()->user()->role_id === 1)
-                <a href="{{ route('users.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-green-50 transition">
-                    <svg class="w-6 h-6 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M16 19h4a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-2m-2.236-4a3 3 0 1 0 0-4M3 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
-                    </svg>
-                    <span class="font-semibold">Users</span>
-                </a>
-            @endif
-            <a href="{{ route('profile') }}" class="flex items-center px-3 gap-3 py-2 rounded-lg hover:bg-green-50 transition">
-                <svg class="w-6 h-6 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 9h3m-3 3h3m-3 3h3m-6 1c-.306-.613-.933-1-1.618-1H7.618c-.685 0-1.312.387-1.618 1M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
-                </svg>
-                <span class="font-semibold">My Profile</span>
-            </a>
-            <a href="{{ route('lessons.index') }}" class="flex items-center px-3 gap-3 py-2 rounded-lg hover:bg-green-50 transition">
-                <svg class="w-6 h-6 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4"/>
-                </svg>
-                <span class="font-semibold">Lessons</span>
-            </a>
-            <a href="{{ route('badges.index') }}" class="flex items-center px-3 gap-3 py-2 rounded-lg hover:bg-green-50 transition">
-                <svg class="w-6 h-6 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
-                </svg>
-                <span class="font-semibold">Badges</span>
-            </a>
-            <a href="{{ route('vocabulary.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-green-50 transition">
-                <svg class="w-6 h-6 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m4 4 1 5 2-3.333L14 17l1-5m4-8v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
-                </svg>
-                <span class="font-semibold">My Vocabulary</span>
-            </a>
-            <div class="p-6 border-t border-gray-200">
-                <button id="openModalBtn" class="w-full bg-green-800 hover:bg-green-900 text-white py-2 rounded-md font-semibold transition">
-                    + Add New Word
-                </button>
-            </div>
-        </nav>
-    </aside>
-
-    <main class="flex-grow flex flex-col">
-        <header class="w-full bg-white p-6 border-b border-gray-200 flex items-center justify-between shadow-sm">
+<body class="bg-gray-100 min-h-screen flex flex-col text-gray-800">
+    <header class="w-full bg-white p-6 border-b border-gray-200 shadow-sm">
+        <div class="flex items-center justify-between mb-4">
             <h1 class="text-5xl font-black text-gray-900 tracking-tight">
                 English<span class="text-green-800">App</span>
             </h1>
@@ -100,11 +49,66 @@
                     </button>
                 </form>
             </div>
-        </header>
-
-        <div class="p-6 flex-grow">
-            @yield('content')
         </div>
+
+        <nav class="flex w-full justify-between">
+            <a href="{{ route('home.index') }}" class="flex items-center gap-2 px-4 rounded-lg hover:bg-green-50 transition whitespace-nowrap">
+                <svg class="w-5 h-5 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/>
+                </svg>
+                <span class="font-semibold">Home</span>
+            </a>
+            @if(auth()->user()->role_id === 1)
+                <a href="{{ route('users.index') }}" class="flex items-center gap-2 px-4 rounded-lg hover:bg-green-50 transition whitespace-nowrap">
+                    <svg class="w-5 h-5 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M16 19h4a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-2m-2.236-4a3 3 0 1 0 0-4M3 18v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Zm8-10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                    </svg>
+                    <span class="font-semibold">Users</span>
+                </a>
+            @endif
+            <a href="{{ route('profile') }}" class="flex items-center px-4 gap-2 rounded-lg hover:bg-green-50 transition whitespace-nowrap">
+                <svg class="w-5 h-5 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 9h3m-3 3h3m-3 3h3m-6 1c-.306-.613-.933-1-1.618-1H7.618c-.685 0-1.312.387-1.618 1M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm7 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
+                </svg>
+                <span class="font-semibold">My Profile</span>
+            </a>
+            <a href="{{ route('lessons.index') }}" class="flex items-center px-4 gap-2 rounded-lg hover:bg-green-50 transition whitespace-nowrap">
+                <svg class="w-5 h-5 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4"/>
+                </svg>
+                <span class="font-semibold">Lessons</span>
+            </a>
+            <a href="{{ route('badges.index') }}" class="flex items-center px-4 gap-2 rounded-lg hover:bg-green-50 transition whitespace-nowrap">
+                <svg class="w-5 h-5 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
+                </svg>
+                <span class="font-semibold">Badges</span>
+            </a>
+            <a href="{{ route('words.index') }}" class="flex items-center gap-2 px-4 rounded-lg hover:bg-green-50 transition whitespace-nowrap">
+                <svg class="w-5 h-5 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4"/>
+                </svg>
+                <span class="font-semibold">Words</span>
+            </a>
+            <a href="{{ route('vocabulary.index') }}" class="flex items-center gap-2 px-4 rounded-lg hover:bg-green-50 transition whitespace-nowrap">
+                <svg class="w-5 h-5 text-green-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m4 4 1 5 2-3.333L14 17l1-5m4-8v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
+                </svg>
+                <span class="font-semibold">My Vocabulary</span>
+            </a>
+            
+            <button id="openModalBtn" class="flex items-center gap-2 px-4 rounded-lg bg-green-800 hover:bg-green-900 text-white transition whitespace-nowrap">
+                <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                </svg>
+                <span class="font-semibold">Add New Word</span>
+            </button>
+        </nav>
+        
+    </header>
+
+    <main class="flex-grow p-6">
+        @yield('content')
     </main>
 
     <div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">

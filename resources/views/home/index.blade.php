@@ -85,6 +85,8 @@
             `,
         };
 
+        const completedLessonIds = @json($completedLessonIds);
+
         function openModal(level) {
             const modal = document.getElementById('lessonsModal');
             const modalTitle = document.getElementById('modalTitle');
@@ -95,21 +97,29 @@
                 lessonsByLevel[level].forEach(lesson => {
                     const card = document.createElement('div');
                     card.className = 'bg-gray-50 rounded-lg shadow p-4 flex flex-col items-center cursor-pointer hover:shadow-lg transition';
-
+                    const resolveUrl = `/lessons/${lesson.id}/resolve`;
+                    const showButton = !completedLessonIds.includes(lesson.id);
                     card.innerHTML = `
                         ${iconsByLevel[level] || ''}
                         <h4 class="text-lg font-semibold text-center text-gray-800 mb-2">${lesson.title}</h4>
                         <p class="text-gray-600 text-sm text-center">${lesson.description.length > 100 ? lesson.description.substring(0, 100) + '...' : lesson.description}</p>
+                        ${showButton ? `
+                        <a href="${resolveUrl}" 
+                        class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition font-semibold text-center w-full"
+                        role="button">
+                        Resolver
+                        </a>` : `<p class="mt-4 text-green-600 font-semibold">Completado</p>`}
                     `;
                     modalLessons.appendChild(card);
                 });
             } else {
                 modalLessons.innerHTML = '<p class="col-span-full text-center text-gray-600">No lessons found.</p>';
             }
-
             modal.classList.remove('hidden');
             modal.classList.add('flex');
         }
+
+
         function closeModal() {
             const modal = document.getElementById('lessonsModal');
             modal.classList.remove('flex');

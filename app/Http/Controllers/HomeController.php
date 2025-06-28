@@ -11,8 +11,8 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $user = auth()->user();
         $lessons = Lesson::orderBy('level')->orderBy('order')->get();
-
         $lessonsByLevel = $lessons->groupBy(function ($lesson) {
             return ucfirst(strtolower($lesson->level));
         });
@@ -23,8 +23,14 @@ class HomeController extends Controller
             ->orderByDesc('completions')
             ->limit(5)
             ->get();
-
-        return view('home.index', compact('lessonsByLevel', 'popularLessons'));
+        $completedLessonIds = $user 
+            ? UserProgress::where('user_id', $user->id)
+                ->whereNotNull('completed_at')
+                ->pluck('lesson_id')
+                ->toArray()
+            : [];
+        return view('home.index', compact('lessonsByLevel', 'popularLessons', 'completedLessonIds'));
     }
+
 }
 
