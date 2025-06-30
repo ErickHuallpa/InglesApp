@@ -28,9 +28,12 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'role_id' => 2,
+            'level' => 'basic',
         ]);
+
         return redirect('/login')->with('success', 'Registro exitoso. Por favor, inicia sesión.');
     }
+
     public function showLoginForm()
     {
         return view('auth.login');

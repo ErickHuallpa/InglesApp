@@ -59,7 +59,12 @@ class LessonController extends Controller
 
         return view('lessons.solve', compact('lesson', 'exercises'));
     }
+    public function destroy(Lesson $lesson)
+    {
+        $lesson->delete();
 
+        return redirect()->route('lessons.index')->with('success', 'Lección eliminada correctamente.');
+    }
     public function submit(Request $request, Lesson $lesson)
     {
         $exercises = $lesson->exercises()->get();
@@ -105,8 +110,6 @@ class LessonController extends Controller
                     }
                 }
             }
-
-            // Guardar o actualizar el resultado del ejercicio para el usuario
             \App\Models\UserResult::updateOrCreate(
                 [
                     'user_id' => $user->id,
@@ -120,8 +123,6 @@ class LessonController extends Controller
                 ]
             );
         }
-
-        // Registrar progreso y completar la lección
         \App\Models\UserProgress::updateOrCreate(
             [
                 'user_id' => $user->id,
@@ -135,7 +136,5 @@ class LessonController extends Controller
         return redirect()->route('lessons.index')
             ->with('success', "Lección completada con puntuación: $score / $total");
     }
-
-
 
 }

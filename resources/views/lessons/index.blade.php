@@ -45,11 +45,6 @@
                 <h3 class="font-semibold text-sm text-center text-gray-900 mb-1 truncate" title="{{ $lesson->title }}">{{ $lesson->title }}</h3>
                 <p class="text-xs text-gray-600 mb-1 truncate" title="{{ $lesson->description }}">{{ $lesson->description }}</p>
                 <p class="text-xs text-gray-500 text-center"><strong>Order:</strong> {{ $lesson->order }}</p>
-                <button class="absolute top-2 right-2 text-green-600 hover:text-green-800"onclick="openModal({{ $lesson }})"aria-label="Edit Lesson"title="Edit Lesson">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M11 17h2M12 14v3m-4-7l3 3m-3-3a2.5 2.5 0 013.54 0l3 3a2.5 2.5 0 010 3.54l-3 3a2.5 2.5 0 01-3.54 0l-3-3a2.5 2.5 0 010-3.54l3-3z" />
-                    </svg>
-                </button>
                 <a href="{{ route('lessons.exercises', $lesson->id) }}"class="mt-4 block text-center bg-indigo-600 text-white py-1.5 rounded hover:bg-indigo-700 transition"aria-label="View Exercises for {{ $lesson->title }}"title="View Exercises">
                     Ver ejercicios
                 </a>
@@ -57,6 +52,26 @@
                     <a href="{{ route('lessons.resolve', $lesson->id) }}" class="mt-2 block text-center bg-green-600 text-white py-1.5 rounded hover:bg-green-700 transition" aria-label="Resolve Lesson" title="Resolver lección">
                         Resolver lección
                     </a>
+                @endif
+                @if(Auth::check() && (Auth::user()->role_id === 1 || Auth::user()->role_id === 3))
+                    <div class="flex justify-center mt-3 space-x-4">
+                        <form method="POST" action="{{ route('lessons.destroy', $lesson->id) }}" onsubmit="event.preventDefault(); confirmDelete({{ $lesson->id }}, '{{ $lesson->title }}')" class="inline-block">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="text-red-600 hover:text-red-800" title="Eliminar lección" aria-label="Eliminar lección">
+                                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                                </svg>
+                            </button>
+                        </form>
+                        <button class="text-green-600 hover:text-green-800" 
+                            onclick='openModal(@json($lesson))' 
+                            aria-label="Edit Lesson" title="Edit Lesson">
+                            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"/>
+                            </svg>
+                        </button>
+                    </div>
                 @endif
             </div>
         @endforeach
@@ -103,6 +118,19 @@
         </form>
     </div>
 </div>
+<div id="deleteModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg p-6 w-full max-w-md relative shadow-lg">
+        <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 text-2xl font-bold" onclick="closeDeleteModal()">&times;</button>
+        <h3 class="text-xl font-semibold text-gray-900 mb-4">¿Eliminar lección?</h3>
+        <p class="text-gray-700 mb-6">¿Estás seguro de que deseas eliminar la lección <strong id="deleteLessonTitle"></strong>? Esta acción no se puede deshacer.</p>
+        <form id="deleteForm" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700 transition">Sí, eliminar</button>
+        </form>
+    </div>
+</div>
+
 <script>
     function openModal(lesson = null) {
         document.getElementById('lessonModal').classList.remove('hidden');
@@ -113,7 +141,12 @@
             document.getElementById('description').value = lesson.description ?? '';
             document.getElementById('level').value = lesson.level;
             document.getElementById('order').value = lesson.order;
-            document.getElementById('content').value = JSON.stringify(lesson.content ?? {}, null, 2);
+            try {
+                const content = lesson.content ? JSON.parse(lesson.content) : {};
+                document.getElementById('content').value = JSON.stringify(content, null, 2);
+            } catch(e) {
+                document.getElementById('content').value = lesson.content ?? '';
+            }
         } else {
             document.getElementById('modalTitle').textContent = 'Add Lesson';
             document.getElementById('lessonId').value = '';
@@ -125,8 +158,19 @@
         }
     }
 
+
     function closeModal() {
         document.getElementById('lessonModal').classList.add('hidden');
     }
+    function confirmDelete(lessonId, title) {
+        document.getElementById('deleteLessonTitle').textContent = title;
+        document.getElementById('deleteForm').action = `/lessons/${lessonId}`;
+        document.getElementById('deleteModal').classList.remove('hidden');
+    }
+
+    function closeDeleteModal() {
+        document.getElementById('deleteModal').classList.add('hidden');
+    }
+
 </script>
 @endsection
